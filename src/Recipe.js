@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Recipe.css';
 
+
 class Recipe extends Component {
 	render() {
 		const {title, img, instructions} = this.props;
@@ -13,7 +14,7 @@ class Recipe extends Component {
 					<img src={img} alt={title}></img>
 				</div>
 				<div className="recipe-card-content">
-					<h3 className="recipe-title">Recipe {title}</h3>
+					<h3 className="recipe-title">{title}</h3>
 					<h4>Ingredients:</h4>
 					<ul>
 						{ingredients}
@@ -21,8 +22,6 @@ class Recipe extends Component {
 					<h4>Instructions:</h4>
 					<p>{instructions}</p>
 				</div>
-
-				
 			</div>
 		);
 	}
